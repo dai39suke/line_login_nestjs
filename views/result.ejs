@@ -1,0 +1,19 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <body>
+        <h1>Token request was successeful</h1>
+        <form method="post" action="/userInfo">
+        <table><tr><th>access_token</th><td><%= tokenData.data.access_token %></td></tr>
+        <tr><th>token_type</th><td><%= tokenData.data.token_type %></td></tr>
+        <tr><th>refresh_token</th><td><%= tokenData.data.refresh_toke %></td></tr>
+        <tr><th>expires_in</th><td><%= tokenData.data.expires_in %></td></tr>
+        <tr><th>scope</th><td><%= tokenData.data.scope %></td></tr>
+        <tr><th>id_token</th><td><%= tokenData.data.id_token %></td></tr>
+        <tr><th>profile</th><td><%= userProfile.displayName %>: <img src="<%= userProfile.pictureUrl %>"  width="300"></td></tr>
+        </table>
+        <!-- <button type="submit">get userInfo</button><br> -->
+        </form>
+    </body>
+</html>
